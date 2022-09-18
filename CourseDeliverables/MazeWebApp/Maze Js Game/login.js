@@ -15,7 +15,18 @@ window.onload = () =>{
         const password = passwordField.value;
 
 
-        const user = JSON.parse(storage.getItem(username));
+        const existingUser = JSON.parse(storage.getItem(username));
+
+        if(existingUser == null){
+            alert("Provided Username is incorrect or does not exist");
+        }else if(existingUser["password"] == password){
+
+            storage.setItem(username,JSON.stringify(existingUser));
+            alert("You have been succesfully logged in, play on!");
+            location.assign("game.html");
+
+        }
+
         
 
 
