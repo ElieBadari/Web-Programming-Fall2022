@@ -19,7 +19,7 @@ window.onload = () =>{
     });
 
     for(let i = 0; i< walls.length; i++){
-        walls.addEventListener("mouseenter", () =>{
+        walls[i].addEventListener("mouseenter", () =>{
 
             for(let i = 0; i < walls.length; i++){
                 console.log(walls[i]);
