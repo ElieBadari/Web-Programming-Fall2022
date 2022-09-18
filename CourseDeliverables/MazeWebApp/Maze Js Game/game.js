@@ -2,6 +2,7 @@ window.onload = () =>{
 
     const startButton = document.getElementById("start");
     const walls = document.getElementsByClassName("boundary");
+    const boundary = document.getElementById("game");
 
     for(let i = 0; i < walls.length; i++){
        console.log(walls[i]);
@@ -26,11 +27,17 @@ window.onload = () =>{
                  walls[i].style.background = "red";
              }
     
-    
+             
         });
     
 
     }
+    boundary.addEventListener("mouseleave", () =>{
+        for(let i = 0; i < walls.length; i++){
+            console.log(walls[i]);
+             walls[i].style.background = "red";
+         }
+     });
     
 
 
