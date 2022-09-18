@@ -2,12 +2,11 @@
     font-family:'Press Start 2P', cursive;
 }
 body{
-    background-color:darkgray;
+    background-color:goldenrod;
 }
 .login-div{
     margin:100px auto;
     background-color:black;
-    
     width:350px;
     padding: 60px;
 }
