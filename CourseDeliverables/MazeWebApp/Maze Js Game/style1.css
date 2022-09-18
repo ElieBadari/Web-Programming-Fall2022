@@ -15,8 +15,10 @@ body{
     margin: 0 auto;
     padding-top:10px;
     padding-bottom: 20px;
+    
 }
 .logo img{
+    
     width: 100%;
 }
 .title{
@@ -34,4 +36,14 @@ body{
     border:none;
     outline:none;
     background: none;
+}
+.password,
+.username{
+    display: block;
+    margin: 10px 0;
+    padding:10px;
+    border: 1px solid;
+    border-radius: 25px;
+    border-color: gold;
+
 }
