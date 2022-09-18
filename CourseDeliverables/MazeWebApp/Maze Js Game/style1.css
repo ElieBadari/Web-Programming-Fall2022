@@ -11,6 +11,7 @@ body{
     width:350px;
     padding: 60px;
 }
+/*
 .logo{
     margin: 0 auto;
     padding-top:10px;
@@ -21,6 +22,7 @@ body{
     
     width: 100%;
 }
+*/
 .title{
     text-align: center;
     font-size: 30px;
@@ -57,9 +59,14 @@ button.login-btn{
     border-radius: 25px;
     background-color: gold;
     color: darkgoldenrod;
-   
-   
-    
-    
+}
 
+.sign-up{
+    text-align: center;
+    padding: 15px 0px 0px 0px;
+
+}
+a{
+    text-decoration: none;
+    color: gold;
 }
