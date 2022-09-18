@@ -31,7 +31,7 @@ body{
     margin-top:30px;
 }
 .form input{
-    font-size:10px;
+    font-size:15px;
     padding:10px 20px 10px 5px;
     border:none;
     outline:none;
@@ -41,9 +41,25 @@ body{
 .username{
     display: block;
     margin: 10px 0;
-    padding:10px;
+    padding: 10px;
     border: 1px solid;
     border-radius: 25px;
     border-color: gold;
+
+}
+
+button.login-btn{
+    width: 100%;
+    font-size: 15px;
+    margin: 5px;
+    padding: 12px 10px;
+    border:none;
+    border-radius: 25px;
+    background-color: gold;
+    color: darkgoldenrod;
+   
+   
+    
+    
 
 }
