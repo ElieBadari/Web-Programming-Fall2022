@@ -1,3 +1,18 @@
 *{
     font-family:'Press Start 2P', cursive;
 }
+body{
+    background-color:black;
+}
+.login-div{
+    margin:100px auto;
+    background-color: white;
+    width:350px;
+    padding: 60px;
+}
+.logo{
+    margin: 0 auto;
+}
+.logo img{
+    width: 100%;
+}
