@@ -1,20 +1,28 @@
+
 window.onload = () =>{
 
     const startButton = document.getElementById("start");
     const walls = document.getElementsByClassName("boundary");
     const boundary = document.getElementById("game");
     const endButton = document.getElementById("end");
+    const status = document.getElementById("status");
+    
+    //global counters
+    let streak = 0;
+    let losses = 0;
+    let wins = 0;
+
+    
     
    
-    
-    
-    console.log(walls);
-    console.log(walls[5]);
 
     const storage = window.localStorage;
     const currentUser = JSON.parse(storage.getItem("currentUser"));
-
+    const prevScore = currentUser.score;
     
+   
+
+
 
     //this makes walls red on redirection
     for(let i = 0; i < walls.length-1; i++){
@@ -30,9 +38,13 @@ window.onload = () =>{
             for(let i = 0; i < walls.length-1; i++){
 
                  walls[i].style.background = "red";
-                 updateScore(-10);
+                
+                 
              }
-
+             updateScore(-10);
+             streak=0;
+             losses++;
+             console.log(losses);
              armWalls();
              
              
@@ -54,7 +66,7 @@ window.onload = () =>{
         //turns box red 
         const armWalls = function(){
 
-            boundary.addEventListener("mouseleave", () =>{
+            boundary.addEventListener("mouseenter", () =>{
                 for(let i = 0; i < walls.length-1; i++){
         
                     walls[i].style.background = "red";
@@ -81,12 +93,12 @@ window.onload = () =>{
             let new_score = currentUser.score;
            
             if(point == -99){
-                updatee.score = 0;
-                storage.setItem(currentUser.username,JSON.stringify(updatee));
+                currentUser.score = 0;
+                storage.setItem("currentUser",JSON.stringify(currentUser));
             }else{
              new_score += point;
-             updatee.score = new_score;
-             storage.setItem(currentUser.username,JSON.stringify(updatee));
+             currentUser.score = new_score;
+             storage.setItem("currentUser",JSON.stringify(currentUser));
             }
         }
         //returns the last boundary (reset button)
@@ -105,6 +117,8 @@ window.onload = () =>{
 
         releaseWalls();
         updateScore(5);
+        wins++;
+        streak++; 
 
 
         
@@ -116,15 +130,41 @@ window.onload = () =>{
 
     reset.innerHTML = "Reset";
     reset.style.background = "gold";
+    updateScore(-99);
     reset.addEventListener("click", () =>{
 
         updateScore(-99)
+        
 
 
     });
    
+    //score
+    console.log(prevScore);
+    console.log(currentUser.score);
+    console.log(streak);
+    console.log(wins);
+    console.log(losses);
+
+    setInterval(() => {
+        status.innerHTML = "Welcome Back " + currentUser["username"]
+        +"<br>"
+        +"Your Previous Recorded Score: "+prevScore
+        +"<br>"
+        +"Current Score: "+ currentUser.score
+        +"<br>"
+        +"Current Win Streak: "+streak+"<br>"
+        +"Total Wins: "+wins+ "<br>"
+        +"Total Losses: "+losses;
+
+        if(currentUser.score > prevScore){
+
+            storage.setItem(currentUser.username,JSON.stringify(currentUser));
+
+        }
+
+    }, 500);
    
-
-
+    
 
 }
