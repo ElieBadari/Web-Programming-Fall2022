@@ -139,14 +139,10 @@ window.onload = () =>{
 
     });
    
-    //score
-    console.log(prevScore);
-    console.log(currentUser.score);
-    console.log(streak);
-    console.log(wins);
-    console.log(losses);
 
+    //scoring system
     setInterval(() => {
+
         status.innerHTML = "Welcome Back " + currentUser["username"]
         +"<br>"
         +"Your Previous Recorded Score: "+prevScore
@@ -163,7 +159,7 @@ window.onload = () =>{
 
         }
 
-    }, 500);
+    }, 1);
    
     
 
