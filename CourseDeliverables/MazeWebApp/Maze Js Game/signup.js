@@ -15,7 +15,7 @@ window.onload = () =>{
         const newUser = {
             "username": username,
             "password": password,
-            "score": null
+            "score": 0
         }
 
         const user = JSON.parse(storage.getItem(newUser));

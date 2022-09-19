@@ -21,7 +21,7 @@ window.onload = () =>{
             alert("Provided Username is incorrect or does not exist");
         }else if(existingUser["password"] == password){
 
-            storage.setItem(username,JSON.stringify(existingUser));//for existing user might be redundant well see
+            storage.setItem("currentUser",JSON.stringify(existingUser));//for existing user might be redundant well see
             alert("You have been succesfully logged in, play on!");
             location.assign("game.html");
 
