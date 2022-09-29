@@ -16,8 +16,8 @@ body
     margin:100px auto;
     width:480px ;
     height: 500px;
-    background-color: white;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
 
 }
 
@@ -43,15 +43,19 @@ body
 .tic{
     margin:0 0 8px 5px;
 }
+.btn-div
+{
+
+}
 .reset-btn
 {
     width: 100%;
     font-size: 25px;
     margin: 10px 0 0 0;
     padding: 10px 10px;
-    background: gold;
+    background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    border-width: 1px;
+    border:none;
     border-radius: 25px;
 }
 
