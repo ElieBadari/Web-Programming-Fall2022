@@ -23,7 +23,7 @@ const turnHandler0 = (e) =>{
             tics[0].src = "Assets\\yellow.png";
             is_playing = 0;
         }
-        winHandler();
+        winHandler();drawHandler();
     }
     
 };
@@ -40,7 +40,7 @@ const turnHandler1 = (e) =>{
             tics[1].src = "Assets\\yellow.png";
             is_playing = 0;
         }
-        winHandler();      
+        winHandler();drawHandler();     
     }
 };
 const turnHandler2 = (e) =>{ 
@@ -56,7 +56,7 @@ const turnHandler2 = (e) =>{
             tics[2].src = "Assets\\yellow.png";
             is_playing = 0;
        }
-       winHandler();
+       winHandler();drawHandler();
    }
 };
 const turnHandler3 = (e) =>{ 
@@ -72,7 +72,7 @@ const turnHandler3 = (e) =>{
             tics[3].src = "Assets\\yellow.png";
             is_playing = 0;
         }
-        winHandler();
+        winHandler();drawHandler();
    }
 };
 const turnHandler4 = (e) =>{ 
@@ -88,7 +88,7 @@ const turnHandler4 = (e) =>{
            tics[4].src = "Assets\\yellow.png";
            is_playing = 0;
         }
-        winHandler();
+        winHandler();drawHandler();
    }
 };
 const turnHandler5 = (e) =>{ 
@@ -104,7 +104,7 @@ const turnHandler5 = (e) =>{
            tics[5].src = "Assets\\yellow.png";
            is_playing = 0;
        }
-        winHandler();
+        winHandler();drawHandler();
    }
 };
 const turnHandler6 = (e) =>{ 
@@ -120,7 +120,7 @@ const turnHandler6 = (e) =>{
             tics[6].src = "Assets\\yellow.png";
             is_playing = 0;
        }
-        winHandler();
+        winHandler();drawHandler();
    }
 };
 const turnHandler7 = (e) =>{ 
@@ -136,7 +136,7 @@ const turnHandler7 = (e) =>{
             tics[7].src = "Assets\\yellow.png";
             is_playing = 0;
         }
-        winHandler();
+        winHandler();drawHandler();
     }
 };
 const turnHandler8 = (e) =>{ 
@@ -152,7 +152,7 @@ const turnHandler8 = (e) =>{
             tics[8].src = "Assets\\yellow.png";
             is_playing = 0;
         }
-        winHandler();
+        winHandler();drawHandler();
     }
 };
 const starthandler = (e) => {
@@ -179,6 +179,18 @@ const winHandler = (e) => {
         }   
     }
 };
+const drawHandler = (e) =>{
+    let flag = true;
+    for(let i = 0; i<game_state.length;i++){
+        if(game_state[i] == -1){
+            flag = false;
+        }
+    }
+    if(flag){
+        winning_status.classList.remove("start"); 
+        winning_status.innerText ="We have a draw!";
+    }
+}
 
 
 winning_status.classList.add("start");
