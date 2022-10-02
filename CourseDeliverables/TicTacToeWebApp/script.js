@@ -156,11 +156,11 @@ const turnHandler8 = (e) =>{
     }
 };
 const starthandler = (e) => {
-    move_counter =0;
-    game_active = 0; 
+    move_counter = 0;
+    game_active = 0;
+    is_playing = 0; //by default red starts 
     winning_status.classList.add("start");
     tics.forEach(t => t.classList.add("start"));
-    is_playing = 0; //by default red starts
     btn.innerText = "Reset"
     for(let i = 0; i < game_state.length; i++){
         game_state[i] = -1;
@@ -178,6 +178,10 @@ const winHandler = (e) => {
             }
         }
     }
+    if(move_counter == 9){
+        alert("We have a draw!, press ok then reset to restart the game"); //for some reason this works and the below line wont execute
+        //winning_status.innerText = "We have a draw!";
+    }
 };
 
 
@@ -194,8 +198,6 @@ segments[7].addEventListener("click",turnHandler7);
 segments[8].addEventListener("click",turnHandler8);
 
 btn.addEventListener("click",starthandler);
-
-
 
 
 
