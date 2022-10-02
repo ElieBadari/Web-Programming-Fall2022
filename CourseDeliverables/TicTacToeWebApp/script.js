@@ -48,12 +48,147 @@ const turnHandler1 = (e) =>{
     }
 }
 
+const turnHandler2 = (e) =>{ 
+
+    tics[2].classList.remove("start");
+
+   if(game_state[2] == -1){
+       
+       game_state[2] = 1;
+
+       if(is_playing == 0){ 
+           is_playing = 1;
+           tics[2].src = "Assets\\red.png";
+       }else{
+           is_playing = 0;
+           tics[2].src = "Assets\\yellow.png";
+       }
+       
+   }
+}
+
+const turnHandler3 = (e) =>{ 
+
+    tics[3].classList.remove("start");
+
+   if(game_state[3] == -1){
+       
+       game_state[3] = 1;
+
+       if(is_playing == 0){ 
+           is_playing = 1;
+           tics[3].src = "Assets\\red.png";
+       }else{
+           is_playing = 0;
+           tics[3].src = "Assets\\yellow.png";
+       }
+       
+   }
+}
+
+const turnHandler4 = (e) =>{ 
+
+    tics[4].classList.remove("start");
+
+   if(game_state[4] == -1){
+       
+       game_state[4] = 1;
+
+       if(is_playing == 0){ 
+           is_playing = 1;
+           tics[4].src = "Assets\\red.png";
+       }else{
+           is_playing = 0;
+           tics[4].src = "Assets\\yellow.png";
+       }
+       
+   }
+}
+const turnHandler5 = (e) =>{ 
+
+    tics[5].classList.remove("start");
+
+   if(game_state[5] == -1){
+       
+       game_state[5] = 1;
+
+       if(is_playing == 0){ 
+           is_playing = 1;
+           tics[5].src = "Assets\\red.png";
+       }else{
+           is_playing = 0;
+           tics[5].src = "Assets\\yellow.png";
+       }
+       
+   }
+}
+
+const turnHandler6 = (e) =>{ 
+
+    tics[6].classList.remove("start");
+
+   if(game_state[6] == -1){
+       
+       game_state[6] = 1;
+
+       if(is_playing == 0){ 
+           is_playing = 1;
+           tics[6].src = "Assets\\red.png";
+       }else{
+           is_playing = 0;
+           tics[6].src = "Assets\\yellow.png";
+       }
+       
+   }
+}
+const turnHandler7 = (e) =>{ 
+
+    tics[7].classList.remove("start");
+
+   if(game_state[7] == -1){
+       
+       game_state[7] = 1;
+
+       if(is_playing == 0){ 
+           is_playing = 1;
+           tics[7].src = "Assets\\red.png";
+       }else{
+           is_playing = 0;
+           tics[7].src = "Assets\\yellow.png";
+       }
+       
+   }
+}
+const turnHandler8 = (e) =>{ 
+
+    tics[8].classList.remove("start");
+
+   if(game_state[8] == -1){
+       
+       game_state[8] = 1;
+
+       if(is_playing == 0){ 
+           is_playing = 1;
+           tics[8].src = "Assets\\red.png";
+       }else{
+           is_playing = 0;
+           tics[8].src = "Assets\\yellow.png";
+       }
+       
+   }
+}
 
 tics.forEach(t => t.classList.add("start"));
 
 segments[0].addEventListener("click",turnHandler0);
-
 segments[1].addEventListener("click",turnHandler1);
+segments[2].addEventListener("click",turnHandler2);
+segments[3].addEventListener("click",turnHandler3);
+segments[4].addEventListener("click",turnHandler4);
+segments[5].addEventListener("click",turnHandler5);
+segments[6].addEventListener("click",turnHandler6);
+segments[7].addEventListener("click",turnHandler7);
+segments[8].addEventListener("click",turnHandler8);
 
 
 
