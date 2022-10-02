@@ -1,6 +1,6 @@
 const tics = document.querySelectorAll(".tic"); //each img element in a list
 const segments = document.querySelectorAll(".position"); //each img container in a list
-const reset_btn = document.getElementById("reset-btn");//reset buttn element
+const btn = document.getElementById("btn");// btn element
 
 
 let is_playing = 0; //determines who is playing, 0 = red, 1 = yellow
@@ -178,7 +178,16 @@ const turnHandler8 = (e) =>{
    }
 }
 
-tics.forEach(t => t.classList.add("start"));
+const starthandler = (e) => {
+    
+    tics.forEach(t => t.classList.add("start"));
+    btn.innerText = "Reset"
+
+}
+
+
+
+btn.addEventListener("click",starthandler);
 
 segments[0].addEventListener("click",turnHandler0);
 segments[1].addEventListener("click",turnHandler1);
