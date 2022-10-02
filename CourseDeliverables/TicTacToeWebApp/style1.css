@@ -26,26 +26,13 @@ body
     display: inline-block;
     width: 150px;
     height: 150px;
-    padding: 8px 0 0 0;
-}
-
-.position.p2,
-.position.p5,
-.position.p8,
-.position.p3,
-.position.p6,
-.position.p9
-{
-
-    padding: 0 0 0 8px;
+    padding: 10px 4px 5px 3px;
+    position: relative;
 }
 
 .tic{
     margin:0 0 8px 5px;
-}
-.btn-div
-{
-
+    position: absolute
 }
 .reset-btn
 {
@@ -57,5 +44,8 @@ body
     text-align: center;
     border:none;
     border-radius: 25px;
+}
+img.start{
+    visibility: hidden;
 }
 
