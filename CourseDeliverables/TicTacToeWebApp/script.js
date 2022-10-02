@@ -175,12 +175,8 @@ const winHandler = (e) => {
                 winning_status.innerText = "Yellow has won!";  
             }else if(game_state[i[0]] == 0){       
                 winning_status.innerText = "Red has won!";
-            }
-        }
-    }
-    if(move_counter == 9){
-        alert("We have a draw!, press ok then reset to restart the game"); //for some reason this works and the below line wont execute
-        //winning_status.innerText = "We have a draw!";
+            } 
+        }   
     }
 };
 
